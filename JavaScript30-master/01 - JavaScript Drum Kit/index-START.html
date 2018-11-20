@@ -68,6 +68,14 @@
   audio.currentTime = 0;//rewind to the start / zorgt dat ik alles snel kan spelen
   audio.play();
   key.classList.add('playing');
+
+  function removeTransition(e){
+    if(e.propertyName !== 'transform') return;// skip ifnot a transform
+  }
+
+  const keys = document.querySelectorAll('.key');
+
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 });
 
 
