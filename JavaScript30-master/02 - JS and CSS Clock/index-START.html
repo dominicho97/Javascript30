@@ -64,6 +64,8 @@
       top: 50%;
       transform-origin: 100%;   /*zorgt dat klok draait vanaf het middelpunt*/
       transform: rotate(90deg); /* zorgt dat wijzers allebei op 12u staan */
+      transition:all 0,05s;
+      transition-timing-function:cubic-bezier(1, 1.55, 0.15, 1.64); /*manier van wijze die veranderdt bvb met een 'recoil' of heel smooth etc*/
     }
 
   </style>
