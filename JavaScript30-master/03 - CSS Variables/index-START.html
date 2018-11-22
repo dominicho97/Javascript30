@@ -72,7 +72,15 @@
       console.log(this.value);
     }
 
+    function handleUpdate(){
+      const suffix = this.dataset.sizing || ""; //dataset van data-set (html 12 en 15),|| = or
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+  
+
+
     inputs.forEach(input => input.addEventListener('change', handleUpdate)) //gevolg voor elke inputs
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate)) //gevolg voor elke inputs
 
   </script>
 
