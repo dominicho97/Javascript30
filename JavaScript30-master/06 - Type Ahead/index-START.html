@@ -22,7 +22,7 @@ const cities = {};
 
 fetch(endpoint)
 .then(blob => blob.json())
-.then(data => cities = data)
+  .then(data => cities.push(data));
 
 
 
