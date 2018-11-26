@@ -14,6 +14,20 @@ const ctx = canvas.getContext('2de');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+ctx.strokeStyle = '#badass';
+ctx.lineJoin = 'round';
+ctx.lineCap = 'round';
+
+let isDrawing = false;
+let lastX = 0;
+let lastY = 0;
+
+function draw (e){
+  if(!isDrawing) return;  //stop function from running when mouse is not drawn
+}
+
+
+canvas.addEventListener('mouseMove', draw);
 
 
 </script>
