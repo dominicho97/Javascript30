@@ -33,7 +33,7 @@
     
     console.log(team, players);
     // You might think we can just do something like this:
-    team[3] = 'haha';
+   // team[3] = 'haha';
     // however what happens when we update that array?
 
     // now here is the problem!
@@ -53,6 +53,12 @@
     const team3 = players.concat();
 
     // or use the new ES6 Spread
+
+    const team4 = [...players];
+    team4[3] = 'ayee';
+    console.log(team4); //spread, players blijft hetzelfde, enkel team 4 updated
+
+    const team5 = array.from(players);//players blijft hetzelfde, enkel team 5 updated
 
     // now when we update it, the original one isn't changed
 
