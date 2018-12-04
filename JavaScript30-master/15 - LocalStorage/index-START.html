@@ -34,12 +34,24 @@
   function addItem(e){
     e.preventDefault()
 
-    const text = this.querySelector('[name = item]');
+    const text = (this.querySelector('[name = item]')).value; //this komt van 'form'
     const item = {
-      text: 'item name',
+      text: text,
       done: false
-    }
+    };
+    items.push(item); //puts item(38) into items array(31)
+    this.reset();       //this van form
   }
+
+    function populateList(plates = [], platesList){
+      plateslist.innerHTML = plates.map((plate, i ) => {
+        return `
+        
+        
+        
+        `
+      })
+    }
 
   addItems.addEventListener ('submit', addItem)
 
