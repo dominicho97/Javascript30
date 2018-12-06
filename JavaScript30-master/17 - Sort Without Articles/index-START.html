@@ -51,7 +51,7 @@ const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'N
 
 // de woorden "a, the of an"  vervangen met ""(niets) en daarna spaties wegtrimmen
 function strip(bandName){
-  bandName.replace(/^ (a | the |an)/i,"").trim();
+  bandName.replace(/^ (a |the |an)/i,"").trim();
 }
 
 
@@ -60,11 +60,8 @@ function strip(bandName){
 
 //zet const bands in alfabetische volgorde
 const sortedBands = bands.sort(function(a,b)  {
-if(a > b){
-  return 1
-} else {
-  return -1
-}
+  return strip(a) > strip(b) ? 1:-1; //return 1 if strip(a>b) else return -1
+
 });
 
 console.log(sortedBands);
