@@ -198,7 +198,9 @@ const seconds = timeNodes
 
 
 let secondsLeft = seconds;
-const hours = Math.floor(secondsLeft/3600); // (secondsLeft/3600 voor aantal uren, math .floor() voor ronde getallen afronding(4 ipv 4.9))
+const hours = Math.floor(secondsLeft/3600); // (secondsLeft/3600 voor aantal uren, math .floor() vr ronde cijfers
+secondsLeft = secondsLeft % 3600;
+console.log(secondsLeft);
 
 </script>
 </body>
