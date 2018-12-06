@@ -193,7 +193,12 @@ const seconds = timeNodes
     return(mins*60) + secs;
     console.log(mins, secs)
 })
-.reduce((total,vidSeconds)) => total + vidSeconds)
+.reduce((total,vidSeconds) => total + vidSeconds)// get total seconds count
+
+
+
+let secondsLeft = seconds;
+const hours = Math.floor(secondsLeft/3600); // (secondsLeft/3600 voor aantal uren, math .floor() voor ronde getallen afronding(4 ipv 4.9))
 
 </script>
 </body>
