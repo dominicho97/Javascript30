@@ -50,11 +50,11 @@ const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'N
 
 
 // de woorden "a, the of an"  vervangen met ""(niets) en daarna spaties wegtrimmen
-function strip(bandName){
-  bandName.replace(/^ (a |the |an)/i,"").trim();
+
+
+function strip(bandName) {
+  return bandName.replace(/^(a |the |an )/i, '').trim();
 }
-
-
 
 
 
@@ -63,6 +63,13 @@ const sortedBands = bands.sort(function(a,b)  {
   return strip(a) > strip(b) ? 1:-1; //return 1 if strip(a>b) else return -1
 
 });
+
+// neemt HTML , loops over alles met .map, daarna alles joinen = alles van console.log overplaatsen naar een lijst op het scherm
+document.querySelector('#bands').innerHTML = 
+sortedBands.map(band => `<li> ${band}</li>`)
+.join("");
+
+
 
 console.log(sortedBands);
 
