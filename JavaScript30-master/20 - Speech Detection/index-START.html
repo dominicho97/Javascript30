@@ -15,14 +15,18 @@
 
 
 
-  const SpeechRecognition = new SpeechRecognition();
-  SpeechRecognition.interimResults = true;
+  const recognition = new SpeechRecognition();
+  recognition.interimResults = true;
 
 
   let p = document.createElement('p');
   let words = document.querySelector('.words');
   words.appendChild(p);
 
+
+  recognition.addEventListener('results', e => {
+    console.log(e);
+  });
 
 </script>
 
