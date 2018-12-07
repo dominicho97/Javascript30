@@ -30,9 +30,15 @@
   .map(result => result.transcript)
       .join('');
 
+  p.textContent = transcript;
+  if(e.results[0].isFinal){ // zorgt ervoor dat er na elke pause een nieuwe paragraaf wordt gebruikt tijdens de speech
+    p = document.createElement('p');
+    words.appendChild(p);
+  }
+  console.log(transcript);
   });
 
-
+  recognition.addEventListener('end', recognition.start);
 
   recognition.start();
 </script>
