@@ -24,10 +24,13 @@
   words.appendChild(p);
 
 
-  recognition.addEventListener('results', e => {
-    console.log(e);
+  recognition.addEventListener('result', e => {
+    console.log(e.results);
   });
 
+
+
+  recognition.start();
 </script>
 
 
