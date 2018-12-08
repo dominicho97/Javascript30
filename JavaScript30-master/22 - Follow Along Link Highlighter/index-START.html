@@ -34,8 +34,11 @@
     
 
     function highlightLink(){
-      const linkCoords = this.getBoundingClientRect();
+      const linkCoords = this.getBoundingClientRect(); // geeft de coördinaten weer van waar de muis zich bevindt
       console.log(linkCoords);
+      highlight.style.width = `${linkCoords.width}px`;
+      highlight.style.width = `${linkCoords.height}px`;
+      highlight.style.transform = `translate${linkCoords.left}px, ${linkCoords.top}px;`
     }
 
 
