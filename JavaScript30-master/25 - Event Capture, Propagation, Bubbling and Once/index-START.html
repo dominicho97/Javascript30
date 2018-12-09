@@ -49,6 +49,7 @@ const divs = document.querySelector('div');
 
 function logText(e){
   console.log(this.classList.value);
+  e.stopPropagation();
 
 }
 
