@@ -52,9 +52,11 @@ function logText(e){
 
 }
 
-divs.forEach(div => div.addEventListener('click', logText);
+  divs.forEach(div => div.addEventListener('click', logText, {
+  capture: false
+}));
   
-});
+
 
 
 </script>
