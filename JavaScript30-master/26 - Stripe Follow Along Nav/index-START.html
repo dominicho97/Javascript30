@@ -234,8 +234,19 @@
 
     const dropdown = this.querySelector('.dropdown');
     const dropdownCoords = dropdown.getBoundingClientRect();
+    const navCoords
   }
   
+  const coords = {
+    height: dropdownCoords.height,
+      width: dropdownCoords.width,
+      top: dropdownCoords.top - navCoords.top,
+      left: dropdownCoords.left - navCoords.left
+    };
+  
+
+
+
 
   function handleLeave(){
     this.classList.remove('trigger-enter', 'trigger-enter-active');
