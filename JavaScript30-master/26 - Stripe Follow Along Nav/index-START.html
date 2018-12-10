@@ -229,21 +229,16 @@
 
   function handleEnter(){
     this.classList.add('trigger-enter');
-    setTimeout (function(){
-      this.classList.add('trigger-enter-active');
-    }, 150);
+    setTimeout(() => this.classList.add('trigger-enter-active'), 150);
   }
+  
 
   function handleLeave(){
     console.log('LEAVE');
   }
 
-  triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));
-  triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave));
-
-  
-
-
+     triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter))
+    triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave))
 </script>
 
 </body>
