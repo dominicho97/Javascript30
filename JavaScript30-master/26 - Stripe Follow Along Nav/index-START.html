@@ -232,10 +232,11 @@
   }
 
   function handleLeave(){
-    
+
   }
 
-
+  triggers.forEach(triggger => trigger.addEventListener('mousehandle', handleEnter));
+  triggers.forEach(triggger => trigger.addEventListener('mouseleave', handleLeave));
 
 </script>
 
