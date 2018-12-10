@@ -234,8 +234,14 @@
 
     const dropdown = this.querySelector('.dropdown');
     const dropdownCoords = dropdown.getBoundingClientRect();
-    const navCoords
+    const navCoords = nav.getBoundingClientRect();
   }
+
+    background.style.setProperty('width', `${coords.width}px`);
+    background.style.setProperty('height', `${coords.height}px`);
+    
+  background.style.setProperty('transform', `translate(${coords.left}px, ${coords.top}px)`);
+    
   
   const coords = {
     height: dropdownCoords.height,
