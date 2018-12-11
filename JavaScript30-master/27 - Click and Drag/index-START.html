@@ -45,7 +45,8 @@
     isDown = true;
     slider.classList.add('active');
     startX = e.pageX - slider.offsetLeft;
-    console.log(startX);
+    scrollLeft = slider.scrollLeft;
+    
   });
 
   slider.addEventListener('mouseleave', () => {
@@ -60,8 +61,7 @@
 
   slider.addEventListener('mousemove', () => {
     if(!isDown) return;//stop the function from running
-    console.count(isDown);
-    console.log(startX);
+   
 });
 
 </script>
