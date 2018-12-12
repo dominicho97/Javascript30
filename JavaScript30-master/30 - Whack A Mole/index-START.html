@@ -38,6 +38,7 @@
   const moles = document.querySelectorAll('.mole');
   let lastHole;
   let timeUp = false;
+  let score = 0;
 
   function randomTime(min, max){
     return Math.round(Math.random()) * (max - min) + min;
@@ -74,7 +75,11 @@
     }
 
     function bonk(e){
-      console.log(e)
+      if(!e.isTrusted) return; //cheater!
+      score++;
+      this.classList.remove('up');
+      scoreBoard.textContent = score;
+
     }
 
 
