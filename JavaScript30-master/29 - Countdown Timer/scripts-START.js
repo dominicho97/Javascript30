@@ -22,5 +22,6 @@
 
 
   function displayTimeLeft(seconds){
-    console.log(seconds);
+  const minutes = Math.floor(seconds / 60);
+    console.log(minutes);
   }
