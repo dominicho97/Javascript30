@@ -1,16 +1,22 @@
 
   let countdown;
   const timerDisplay = document.querySelector('.display__time-left');//timer van HTML
-  const endTime = document.querySelector('.disgitplay__end-time');
+  const endTime = document.querySelector('.display__end-time');
   const buttons = document.querySelectorAll('[data-time]');
   
   
   
   function timer(seconds){
+    // clear any existing timer
+    clearInterval(countdown);
+
+
+
   const now = Date.now()
   const then = now + seconds*1000;
   displayTimeLeft(seconds);
   displayEndTime(then);
+
   
   countdown = setInterval(() => {
     const secondsLeft = Math.round((then - Date.now()) / 1000);
@@ -42,7 +48,19 @@
   }
 
   function startTimer(){
-    console.log(this);
+    const seconds = parseInt(this.dataset.time);
+    timer(seconds);
   }
 
   buttons.forEach(button => button.addEventListener('click', startTimer));
+
+  document.customForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const mins = this.minutes.value;
+    console.log(mins);
+    timer(mins*60); //*6. omdat onze minutes variabel (34) seocnden nodig heeft 
+    this.reset();
+
+
+
+  });
